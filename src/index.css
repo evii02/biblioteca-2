@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* src/index.css o src/App.css */
+input,
+textarea,
+select {
+  font-size: 1rem;
+  line-height: 1.5;
+  border-color: #e0e0e0;
+  background: rgba(128, 128, 128, 0.375);
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #38bdf8; /* Azul más brillante al hacer hover */
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
+.animate {
+  view-timeline-name: --revealing-image;
+  view-timeline-axis: block;
+
+  animation-name: show;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-timeline: --revealing-image;
+  animation-range: entry 25% cover 50%;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
